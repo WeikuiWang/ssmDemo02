@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 设置包的别名后，该包内的类有@Alias修饰的用修饰的别名，
+		没有设置别名的为其设置一个和类名相同的别名(经测试不区分大小写，如User/user/uSer均可识别)，
+		类的别名可在UserMapper.xml中的resultType值中使用  -->
+	<typeAliases>
+		<package name="com.kui.blog.vo"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/kui/blog/vo/UserMapper.xml"/>
+	</mappers>
+</configuration>
